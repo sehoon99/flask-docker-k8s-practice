@@ -1,1 +1,2 @@
-flask    # 이 앱이 동작하기 위해 필요한 Python 패키지 이름
+flask
+redis

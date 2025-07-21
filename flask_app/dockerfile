@@ -1,10 +1,10 @@
-FROM python:3.10-slim               # Python 3.10이 설치된 가벼운 리눅스 이미지 사용
+FROM python:3.10-slim
 
-WORKDIR /app                        # 컨테이너 내 작업 디렉토리 설정
+WORKDIR /app
 
-COPY requirements.txt ./            # 로컬의 requirements.txt를 컨테이너에 복사
-RUN pip install --no-cache-dir -r requirements.txt  # 필요한 패키지 설치
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .                            # 현재 폴더의 모든 파일을 컨테이너 /app 폴더로 복사
+COPY . .
 
-CMD ["python", "app.py"]           # 컨테이너가 시작될 때 실행할 명령어
+CMD ["python3", "app.py"]
